@@ -138,8 +138,8 @@ function buildGauge(sampleId) {
         // Create dial of gauge from pie chart
         let gauge = [{
             type: 'pie',
-            x: [2.5], y: [2.5],
-            marker: { size: 5, color: '#800000' },
+            x: [0.5], y: [0.5],
+            marker: { size: 25, color: '#800000' },
             showlegend: false,
         },
         {
@@ -152,7 +152,8 @@ function buildGauge(sampleId) {
             marker: { colors: ['#6b8e23', '#7c9a3e', '#8da656', '#9eb36d', '#afbf85', '#becb9c', '#cfd9b5', '#dfe5cd', '#eff2e5', '#ffffff'] },
             hole: .5,
             type: 'pie',
-            showlegend: false
+            showlegend: false,
+            hoverinfo: "none"
         }]
 
         Plotly.newPlot('gauge', gauge, needle)
